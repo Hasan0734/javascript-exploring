@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My List align-items</h1>
+    <div id="container">
+        <ul id="myList">
+            <li id="first" class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Animi, fugit. Repellat.</li>
+            <li class="item">Fugiat, quisquam culpa.</li>
+            <li class="item">Quisquam, nihil deserunt.</li>
+            <li class="item">Dolorum, voluptatum consequuntur.</li>
+        </ul>
+        <button id="addNew">Add New Items</button>
+    </div>
+
+    <script>
+      
+        // var items = document.getElementsByTagName('li');
+        // for (let i = 0; i < items.length; i++) {
+        //     const item = items[i];
+        //     item.addEventListener('click', function(event){
+        //        event.target.parentNode.removeChild(event.target)
+        //     })
+        // } 
+         document.getElementById('addNew').addEventListener('click', function(event){
+             var itemParent = document.getElementById('myList');
+             var newItem = document.createElement('li');
+                newItem.innerText = 'Brand New Item';
+                itemParent.appendChild(newItem)
+         })
+        // document.getElementById('first').addEventListener('click', function(event){
+        //     console.log('Click hocche');
+           
+        // })
+        document.getElementById('myList').addEventListener('click', function(event){
+            event.target.parentNode.removeChild(event.target)
+            
+        })
+        // document.getElementById('container').addEventListener('click', function(event){
+        //     console.log('Constainer Click hocche')
+        // })
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1 class="headline">Exploring Event</h1>
+        <button id="first-btn">Click me-0</button>
+        <button id="second-btn">Click me-1</button>
+        <button id="third-btn">Click me-2</button>
+        <button id="fourth-btn">Click me-3</button>
+
+    </section>
+  
+
+    <script>
+        function handleClick1 (){
+            document.body.style.backgroundColor = 'orange';
+          
+        }   
+        function handleClick2 (){
+            document.body.style.backgroundColor = 'red';
+        }
+        function handleClick3 (){
+            document.body.style.backgroundColor = 'green';
+        }
+        function handleClick4 (){
+            document.body.style.backgroundColor = 'purple';
+        }
+      const firstButton = document.getElementById('first-btn');
+      firstButton.addEventListener('click', handleClick1)
+      const secondButton = document.getElementById('second-btn');
+        secondButton.addEventListener('click', handleClick2)
+      const thirdButton = document.getElementById('third-btn');
+      thirdButton.addEventListener('click', handleClick3)
+      const fourthButton = document.getElementById('fourth-btn');
+      fourthButton.addEventListener('click', handleClick4)
+   
+    //   secondButton.onclick = handleClick;
+    </script>
+</body>
+</html>
